@@ -16,32 +16,34 @@ public class MyFirstTest {
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
+        Configuration.holdBrowserOpen = true;
     }
 
     @Test
     void firstTest() {
         open("/automation-practice-form");
 
-        $("[id=firstName]").setValue("Inna");
-        $("[id=lastName]").setValue("Buk");
-        $("[id=userEmail]").setValue("InnaBuk@yandex.ru");
-        $("[id=genterWrapper]").$(byText("Female")).click();
-        $("[id=userNumber]").setValue("8908888888");
-        $("[id=dateOfBirthInput]").click();
+
+        $("#firstName").setValue("Inna");
+        $("#lastName").setValue("Buk");
+        $("#userEmail").setValue("InnaBuk@yandex.ru");
+        $("#genterWrapper").$(byText("Female")).click();
+        $("#userNumber").setValue("8908888888");
+        $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("November");
         $(".react-datepicker__year-select").selectOption("1994");
         $(byText("4")).click();
-        $("[id=subjectsInput]").sendKeys("Physics");
-        $("[id=subjectsInput]").pressEnter();
-        $("[id=hobbiesWrapper]").$(byText("Reading")).click();
-        $("[id=uploadPicture]").uploadFile(new File("src/test/picture/Summer.jpg"));
-        $("[id=currentAddress]").setValue("Address 1");
-        $("[id=state]").click();
+        $("#subjectsInput").sendKeys("Physics");
+        $("#subjectsInput").pressEnter();
+        $("#hobbiesWrapper").$(byText("Reading")).click();
+        $("#uploadPicture").uploadFile(new File("src/test/picture/Summer.jpg"));
+        $("#currentAddress").setValue("Address 1");
+        $("#state").click();
         $(byText("Haryana")).click();
-        $("[id=city]").click();
+        $("#city").click();
         $(byText("Karnal")).click();
 
-        $("[id=submit]").click();
+        $("#submit").click();
 
         $(".modal-body").shouldHave(text("Inna Buk"),
                 text("InnaBuk@yandex.ru"),
