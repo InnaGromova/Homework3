@@ -36,7 +36,7 @@ public class MyFirstTest {
         $("#subjectsInput").sendKeys("Physics");
         $("#subjectsInput").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/picture/Summer.jpg"));
+        $("#uploadPicture").uploadFile(new File("src/test/java/resources/Summer.jpg"));
         $("#currentAddress").setValue("Address 1");
         $("#state").click();
         $(byText("Haryana")).click();
