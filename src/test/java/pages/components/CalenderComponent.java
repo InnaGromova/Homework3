@@ -5,11 +5,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CalenderComponent {
 
-    public void setDate(String year){
-        $(".react-datepicker__month-select").click();
-        $(byText("November")).click();
-        $(".react-datepicker__year-select").click();
+    public void setDate(String day, String month, String year){
+        $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
-        $(".react-datepicker__day--004").click();
+        $(byText(day)).click();
     }
 }
