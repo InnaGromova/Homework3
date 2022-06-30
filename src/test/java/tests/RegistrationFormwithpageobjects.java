@@ -6,26 +6,14 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationFormPage;
 
-import java.io.File;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-
 public class RegistrationFormwithpageobjects {
-
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
     }
-
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-
-
-
     @Test
     void firstTest() {
         String firstName = "Inna";
@@ -33,30 +21,30 @@ public class RegistrationFormwithpageobjects {
         String usermail = "inesabuk@yandex.ru";
         String gender = "Female";
         String usernumber = "8908888888";
+        String day = "4";
+        String month = "November";
+        String year = "1994";
         String subject = "Physics";
         String hobby = "Reading";
         String address = "Address 1";
-        String picture = "src/test/java/resources/Summer.jpg";
+        String picture = "src/test/resources/Summer.jpg";
         String state = "Haryana";
         String city = "Karnal";
-
-
 
         registrationFormPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(usermail)
-                .setGender(gender)
-                .setNumber(usernumber)
-                .setBirthDate("4", "November", "1994")
+                .setGender()
+                .setNumber()
+                .setBirthDate(day, month, year)
                 .setSubject(subject)
-                .setHobby(hobby)
+                .setHobby()
                 .setPicture(picture)
                 .setCurrentAddress(address)
                 .setState(state)
                 .setCity(city)
-                .Submit();
-
+                .submit();
 
         registrationFormPage
                 .checkResult("Student Name", firstName + " " + lastName)
