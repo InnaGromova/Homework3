@@ -72,8 +72,8 @@ public class RegistrationFormPage {
         pictureSelect.uploadFile(new File(value));
         return this;
     }
-    public RegistrationFormPage setNumber(){
-        usernumberInput.setValue("8908888888");
+    public RegistrationFormPage setNumber(String value){
+        usernumberInput.setValue(value);
         return this;
     }
     public RegistrationFormPage setState(String value){

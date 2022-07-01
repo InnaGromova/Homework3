@@ -36,7 +36,7 @@ public class RegistrationFormwithpageobjects {
                 .setLastName(lastName)
                 .setEmail(usermail)
                 .setGender()
-                .setNumber()
+                .setNumber(usernumber)
                 .setBirthDate(day, month, year)
                 .setSubject(subject)
                 .setHobby()
