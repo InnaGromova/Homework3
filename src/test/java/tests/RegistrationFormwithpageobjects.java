@@ -16,47 +16,33 @@ public class RegistrationFormwithpageobjects {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     @Test
     void firstTest() {
-        String firstName = "Inna";
-        String lastName = "Buk";
-        String usermail = "inesabuk@yandex.ru";
-        String gender = "Female";
-        String usernumber = "8908888888";
-        String day = "4";
-        String month = "November";
-        String year = "1994";
-        String subject = "Physics";
-        String hobby = "Reading";
-        String address = "Address 1";
-        String picture = "src/test/resources/Summer.jpg";
-        String state = "Haryana";
-        String city = "Karnal";
 
         registrationFormPage.openPage()
-                .setFirstName(firstName)
-                .setLastName(lastName)
-                .setEmail(usermail)
-                .setGender()
-                .setNumber(usernumber)
-                .setBirthDate(day, month, year)
-                .setSubject(subject)
-                .setHobby()
-                .setPicture(picture)
-                .setCurrentAddress(address)
-                .setState(state)
-                .setCity(city)
+                .setFirstName(TestData.firstName)
+                .setLastName(TestData.lastName)
+                .setEmail(TestData.usermail)
+                .setGender(TestData.choosegender)
+                .setNumber(TestData.usernumber)
+                .setBirthDate(TestData.birthDay, TestData.birthMonth, TestData.birthYear)
+                .setSubject(TestData.subjects)
+                .setHobby(TestData.hobby)
+                .setPicture(TestData.picture)
+                .setCurrentAddress(TestData.address)
+                .setState(TestData.state)
+                .setCity(TestData.city)
                 .submit();
 
         registrationFormPage
-                .checkResult("Student Name", firstName + " " + lastName)
-                .checkResult("Student Email", usermail)
-                .checkResult("Gender", gender)
-                .checkResult("Mobile", usernumber)
-                .checkResult("Date of Birth", "4 November,1994")
-                .checkResult("Subjects", subject)
-                .checkResult("Hobbies", hobby)
+                .checkResult("Student Name", TestData.firstName + " " + TestData.lastName)
+                .checkResult("Student Email", TestData.usermail)
+                .checkResult("Gender", TestData.choosegender)
+                .checkResult("Mobile", TestData.usernumber)
+                .checkResult("Date of Birth", TestData.birthDay + " " + TestData.birthMonth + "," + TestData.birthYear)
+                .checkResult("Subjects", TestData.subjects)
+                .checkResult("Hobbies", TestData.hobby)
                 .checkResult("Picture", "Summer.jpg")
-                .checkResult("Address", address)
-                .checkResult("State and City", state + " " + city);
+                .checkResult("Address", TestData.address)
+                .checkResult("State and City", TestData.state + " " + TestData.city);
 
     }
 }
