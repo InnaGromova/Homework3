@@ -17,12 +17,12 @@ public class RegistrationFormPage {
 
     SelenideElement firstNameInput = $("#firstName"),
     lastNameInput = $("#lastName"),
-    genderChoose =  $(byText("Female")),
+    genderChoose =  $("#genterWrapper"),
     usermailInput = $("#userEmail"),
     dateofbirthChoose =  $("#dateOfBirthInput"),
     currentaddressInput =  $("#currentAddress"),
     subjectInput = $("#subjectsInput"),
-    hobbyChoose =  $(byText("Reading")),
+ //   hobbyChoose =  $(byText("Reading")),
     pictureSelect =  $("#uploadPicture"),
     usernumberInput = $("#userNumber"),
     stateChoose =  $("#state"),
@@ -42,8 +42,8 @@ public class RegistrationFormPage {
         lastNameInput.setValue(value);
         return this;
     }
-    public RegistrationFormPage setGender(){
-        genderChoose.click();
+    public RegistrationFormPage setGender(String value){
+        genderChoose.$(byText(value)).click();
         return this;
     }
     public RegistrationFormPage setEmail(String value){
@@ -64,8 +64,8 @@ public class RegistrationFormPage {
         subjectInput.pressEnter();
         return this;
     }
-    public RegistrationFormPage setHobby(){
-        hobbyChoose.click();
+    public RegistrationFormPage setHobby(String value){
+        $(byText(value)).click();
         return this;
     }
     public RegistrationFormPage setPicture(String value){
