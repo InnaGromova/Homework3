@@ -33,3 +33,9 @@ dependencies {
 tasks.withType(Test) {
     useJUnitPlatform()
 }
+
+task test_job1(type: Test){
+    useJUnitPlatform{
+        includeTags "test_job1"
+    }
+}
