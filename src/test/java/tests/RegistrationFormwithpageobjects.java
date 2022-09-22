@@ -3,8 +3,10 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.credentialsConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.RegistrationFormPage;
@@ -23,10 +25,13 @@ public class RegistrationFormwithpageobjects {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
+        credentialsConfig credentialsConfig = ConfigFactory.create(config.credentialsConfig.class);
+
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = System.getProperty("anyText");
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        String selenoid_url = System.getProperty("selenoid_url");
+        //Для переменной selenoid_url проставить значение "selenoid.autotests.cloud/wd/hub"
+        Configuration.remote = String.format("https://%s:%s@%s", credentialsConfig.login(), credentialsConfig.password(), selenoid_url);
 
     }
 
