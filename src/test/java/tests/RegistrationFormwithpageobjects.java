@@ -27,11 +27,12 @@ public class RegistrationFormwithpageobjects {
 
         credentialsConfig credentialsConfig = ConfigFactory.create(config.credentialsConfig.class);
 
+        Configuration.browser = System.getProperty("browser");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         String selenoid_url = System.getProperty("selenoid_url");
-        //Для переменной selenoid_url проставить значение "selenoid.autotests.cloud/wd/hub"
         Configuration.remote = String.format("https://%s:%s@%s", credentialsConfig.login(), credentialsConfig.password(), selenoid_url);
+
 
     }
 
