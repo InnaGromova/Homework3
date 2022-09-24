@@ -14,7 +14,6 @@ import pages.RegistrationFormPage;
 import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormwithpageobjects {
-    @Tag("testjob1")
     @BeforeAll
     static void beforeAll() {
 
@@ -51,6 +50,7 @@ public class RegistrationFormwithpageobjects {
 
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     @Test
+    @Tag("testjob1")
     @DisplayName("Checking the registration form")
     void firstTest() {
         step("Fill out the registration form",() -> {
