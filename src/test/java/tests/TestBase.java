@@ -29,11 +29,14 @@ public class TestBase {
             Configuration.browser = System.getProperty("browser");
             Configuration.browserVersion = System.getProperty("version");
             Configuration.browserSize = System.getProperty("browserSize");
-            String driver = config.remote_driver();
             String login = config.login();
             String password = config.password();
+            Configuration.remote = String.format("https://%s:%s@selenoid.autotests.cloud/#/", login, password);
+ //           String driver = config.remote_driver();
+ //           String login = config.login();
+//            String password = config.password();
 
-            Configuration.remote = String.format("https://%s:%s@%s", login, password,driver);
+//            Configuration.remote = String.format("https://%s:%s@%s", login, password,driver);
 
 
         }
