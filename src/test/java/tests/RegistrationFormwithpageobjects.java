@@ -28,9 +28,7 @@ public class RegistrationFormwithpageobjects {
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-//       Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
- //       Configuration.remote = System.getProperty("anyText");
-        String selenoid_url = System.getProperty("selenoid_url");
+        String selenoid_url = credentialsConfig.selenoidurl();
         String login = credentialsConfig.login();
         String password = credentialsConfig.password();
 
