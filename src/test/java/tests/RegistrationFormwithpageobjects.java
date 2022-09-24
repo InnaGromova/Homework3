@@ -26,7 +26,7 @@ public class RegistrationFormwithpageobjects {
 
         credentialsConfig credentialsConfig = ConfigFactory.create(config.credentialsConfig.class);
 
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = credentialsConfig.baseurl();
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("version");
         Configuration.browserSize = System.getProperty("browserSize");
