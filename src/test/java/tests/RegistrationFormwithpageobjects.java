@@ -15,6 +15,7 @@ import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormwithpageobjects {
     @BeforeAll
+    @Tag("testjob1")
     static void beforeAll() {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -50,7 +51,6 @@ public class RegistrationFormwithpageobjects {
 
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     @Test
-    @Tag("testjob1")
     @DisplayName("Checking the registration form")
     void firstTest() {
         step("Fill out the registration form",() -> {
