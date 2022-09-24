@@ -31,7 +31,7 @@ public class TestBase {
             Configuration.browserSize = System.getProperty("browserSize");
             String login = config.login();
             String password = config.password();
-            Configuration.remote = String.format("https://%s:%s@selenoid.autotests.cloud/#/", login, password);
+            Configuration.remote = String.format("https://%s:%s@selenoid.autotests.cloud/wd/hub", login, password);
  //           String driver = config.remote_driver();
  //           String login = config.login();
 //            String password = config.password();
