@@ -23,12 +23,13 @@ public class RegistrationFormwithpageobjects {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
+
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = credentialsConfig.baseurl();
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("version");
         Configuration.browserSize = System.getProperty("browserSize");
-        String driver = System.getProperty("remoteDriverUrl");
+        String driver = credentialsConfig.remotedriver();
         String login = credentialsConfig.login();
         String password = credentialsConfig.password();
 
