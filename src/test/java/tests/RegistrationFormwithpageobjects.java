@@ -1,51 +1,10 @@
 package tests;
 
-
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import config.credentialsConfig;
-import helpers.Attach;
-import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.RegistrationFormPage;
-
 import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormwithpageobjects {
-    public static credentialsConfig credentialsConfig = ConfigFactory.create(config.credentialsConfig.class);
-   @BeforeAll
-    static void beforeAll() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-
-        Configuration.browserCapabilities = capabilities;
-        Configuration.baseUrl = credentialsConfig.baseurl();
-        Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("version");
-        Configuration.browserSize = System.getProperty("browserSize");
-        String driver = credentialsConfig.remote_driver();
-        String login = credentialsConfig.login();
-        String password = credentialsConfig.password();
-
-        Configuration.remote = String.format("https://%s:%s@%s", login, password,driver);
-
-
-    }
-
-    @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-    }
-
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
     @Test
