@@ -28,7 +28,8 @@ public class RegistrationFormwithpageobjects {
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = System.getProperty("browser");
-        Configuration.browserSize = "1920x1080";
+        Configuration.browserVersion = System.getProperty("version");
+        Configuration.browserSize = System.getProperty("browserSize");
         String selenoid_url = credentialsConfig.selenoidurl();
         String login = credentialsConfig.login();
         String password = credentialsConfig.password();
