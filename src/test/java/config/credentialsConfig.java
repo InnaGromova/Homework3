@@ -6,7 +6,7 @@ import org.aeonbits.owner.Config;
 public interface credentialsConfig extends Config {
     String login();
     String password();
-    String remotedriver();
+    String remote_driver();
     String baseurl();
 
 
