@@ -26,11 +26,10 @@ public class RegistrationFormwithpageobjects {
 
         credentialsConfig credentialsConfig = ConfigFactory.create(config.credentialsConfig.class);
 
-
- //       Configuration.baseUrl = "https://demoqa.com";
-//        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browserSize = "1920x1080";
  //       Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
- //       Configuration.remote = System.getProperty("anyText");
+        Configuration.remote = System.getProperty("anyText");
  //       String selenoid_url = System.getProperty("selenoid_url");
         //String login = credentialsConfig.login();
         //String password = credentialsConfig.password();
@@ -54,10 +53,6 @@ public class RegistrationFormwithpageobjects {
     @Tag("testjob1")
     @DisplayName("Checking the registration form")
     void firstTest() {
-
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        Configuration.remote = System.getProperty("anyText");
 
         step("Fill out the registration form",() -> {
 
