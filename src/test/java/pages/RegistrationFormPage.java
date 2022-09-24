@@ -30,8 +30,8 @@ public class RegistrationFormPage {
 
     public RegistrationFormPage openPage(){
         open("/automation-practice-form");
-        executeJavaScript("$('footer').remove()");
-        executeJavaScript("$('#close-fixedban').remove()");
+//        executeJavaScript("$('footer').remove()");
+//        executeJavaScript("$('#close-fixedban').remove()");
         return this;
     }
     public RegistrationFormPage setFirstName(String value){
