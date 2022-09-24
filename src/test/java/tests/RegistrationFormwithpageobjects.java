@@ -30,11 +30,11 @@ public class RegistrationFormwithpageobjects {
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("version");
         Configuration.browserSize = System.getProperty("browserSize");
-        String selenoid_url = credentialsConfig.selenoidurl();
+        String driver = System.getProperty("selenoid_url");
         String login = credentialsConfig.login();
         String password = credentialsConfig.password();
 
-        Configuration.remote = String.format("https://%s:%s@%s", login, password, selenoid_url);
+        Configuration.remote = String.format("https://%s:%s@%s", login, password, driver);
 
     }
 
