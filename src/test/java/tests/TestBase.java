@@ -13,7 +13,6 @@ import pages.RegistrationFormPage;
 
 public class TestBase {
     public static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
-    RegistrationFormPage registrationFormPage = new RegistrationFormPage();
         @BeforeAll
         static void beforeAll() {
 
