@@ -7,7 +7,6 @@ public interface credentialsConfig extends Config {
     String login();
     String password();
     String selenoidurl();
-
     String baseurl();
 
 
