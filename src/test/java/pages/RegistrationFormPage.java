@@ -7,8 +7,7 @@ import pages.components.ResultsTableComponent;
 import java.io.File;
 
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationFormPage {
 
@@ -31,6 +30,8 @@ public class RegistrationFormPage {
 
     public RegistrationFormPage openPage(){
         open("/automation-practice-form");
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#close-fixedban').remove()");
 
         return this;
     }
