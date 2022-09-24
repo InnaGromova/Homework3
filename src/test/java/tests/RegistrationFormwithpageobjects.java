@@ -14,6 +14,7 @@ import pages.RegistrationFormPage;
 import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormwithpageobjects {
+    public static credentialsConfig credentialsConfig = ConfigFactory.create(config.credentialsConfig.class);
    @BeforeAll
     static void beforeAll() {
 
@@ -23,9 +24,6 @@ public class RegistrationFormwithpageobjects {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-
-        credentialsConfig credentialsConfig = ConfigFactory.create(config.credentialsConfig.class);
-
         Configuration.baseUrl = credentialsConfig.baseurl();
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("version");
