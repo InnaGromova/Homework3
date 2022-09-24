@@ -30,7 +30,7 @@ public class RegistrationFormwithpageobjects {
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("version");
         Configuration.browserSize = System.getProperty("browserSize");
-        String driver = credentialsConfig.driver();
+        String driver = System.getProperty("remoteDriverUrl");
         String login = credentialsConfig.login();
         String password = credentialsConfig.password();
 
