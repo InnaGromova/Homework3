@@ -30,7 +30,7 @@ public class RegistrationFormwithpageobjects {
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("version");
         Configuration.browserSize = System.getProperty("browserSize");
-        String driver = System.getProperty("selenoid_url");
+        String driver = credentialsConfig.driver();
         String login = credentialsConfig.login();
         String password = credentialsConfig.password();
 
