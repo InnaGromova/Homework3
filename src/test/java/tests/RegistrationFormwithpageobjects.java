@@ -34,7 +34,8 @@ public class RegistrationFormwithpageobjects {
         String login = credentialsConfig.login();
         String password = credentialsConfig.password();
 
-        Configuration.remote = String.format("https://%s:%s@%s", login, password, driver);
+        Configuration.remote = String.format("https://%s:%s@s%", login, password,driver);
+
 
     }
 
@@ -49,7 +50,7 @@ public class RegistrationFormwithpageobjects {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
     @Test
-    @Tag("testjob1")
+    @Tag("testjob")
     @DisplayName("Checking the registration form")
     void firstTest() {
 
