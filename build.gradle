@@ -37,6 +37,6 @@ tasks.withType(Test) {
 
 task testjob1(type: Test){
     useJUnitPlatform{
-        includeTags "test_job1"
+        includeTags "testjob1"
     }
 }
