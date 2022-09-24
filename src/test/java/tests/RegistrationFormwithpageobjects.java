@@ -14,8 +14,8 @@ import pages.RegistrationFormPage;
 import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormwithpageobjects {
-    @BeforeAll
     @Tag("testjob1")
+    @BeforeAll
     static void beforeAll() {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
