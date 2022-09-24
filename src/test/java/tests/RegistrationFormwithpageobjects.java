@@ -27,12 +27,16 @@ public class RegistrationFormwithpageobjects {
 
         credentialsConfig credentialsConfig = ConfigFactory.create(config.credentialsConfig.class);
 
-        Configuration.browser = System.getProperty("browser");
+
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        String selenoid_url = System.getProperty("selenoid_url");
-        Configuration.remote = String.format("https://%s:%s@%s", credentialsConfig.login(), credentialsConfig.password(), selenoid_url);
+        Configuration.remote = System.getProperty("anyText");
+ //       String selenoid_url = System.getProperty("selenoid_url");
+        //String login = credentialsConfig.login();
+        //String password = credentialsConfig.password();
+        //String selenoid_url = credentialsConfig.selenoid_url();
 
+ //       Configuration.remote = String.format("https://%s:%s@%s", login, password, selenoid_url);
 
     }
 
