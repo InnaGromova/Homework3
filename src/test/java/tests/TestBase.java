@@ -22,11 +22,12 @@ public class TestBase {
             capabilities.setCapability("enableVideo", true);
 
             Configuration.browserCapabilities = capabilities;
-            Configuration.baseUrl = "https://demoqa.com";
+     //       Configuration.baseUrl = "https://demoqa";
 
-            Configuration.browser = System.getProperty("browser");
-            Configuration.browserVersion = System.getProperty("version");
-            Configuration.browserSize = System.getProperty("browserSize");
+     //       Configuration.browser = System.getProperty("browser");
+     //       Configuration.browserVersion = System.getProperty("version");
+    //        Configuration.browserSize = System.getProperty("browserSize");
+
             Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid());
         }
 

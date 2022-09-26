@@ -29,9 +29,9 @@ public class RegistrationFormPage {
     submitChoose =  $("#submit");
 
     public RegistrationFormPage openPage(){
-        open("/automation-practice-form");
-//        executeJavaScript("$('footer').remove()");
-//        executeJavaScript("$('#close-fixedban').remove()");
+        open("https://demoqa.com/automation-practice-form");
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#close-fixedban').remove()");
         return this;
     }
     public RegistrationFormPage setFirstName(String value){
