@@ -47,8 +47,7 @@ public class RegistrationFormwithpageobjects {
         });
     }
 
-        @Test
-        @Tag("testjob")
+
       void secondtest() {
 
             System.out.println(String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid()));
