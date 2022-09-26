@@ -11,6 +11,11 @@ public class RegistrationFormwithpageobjects {
     public static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
     @Test
     @Tag("testjob")
+    void Test1() {
+        System.out.println(String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid()));
+    }
+    @Test
+    @Tag("testjob")
     @DisplayName("Checking the registration form")
     void firstTest() {
 
@@ -45,7 +50,6 @@ public class RegistrationFormwithpageobjects {
                     .checkResult("State and City", TestData.state + " " + TestData.city);
 
         });
-        System.out.println(String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid()));
     }
 
 }
