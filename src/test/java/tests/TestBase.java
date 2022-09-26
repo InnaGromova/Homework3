@@ -9,7 +9,6 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.RegistrationFormPage;
 
 public class TestBase {
     public static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);

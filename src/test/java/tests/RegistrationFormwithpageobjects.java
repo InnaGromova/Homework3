@@ -8,7 +8,7 @@ import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormwithpageobjects {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-
+    public static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
     @Test
     @Tag("testjob")
     @DisplayName("Checking the registration form")
@@ -47,10 +47,11 @@ public class RegistrationFormwithpageobjects {
         });
     }
 
-//        @Test
- //       void secondtest() {
-//            System.out.println(String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid()));
-//        }
+        @Test
+      void secondtest() {
+
+            System.out.println(String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid()));
+        }
 
 }
 
