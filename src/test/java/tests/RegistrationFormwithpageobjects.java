@@ -1,19 +1,11 @@
 package tests;
 
-import config.CredentialsConfig;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.*;
 import pages.RegistrationFormPage;
 import static io.qameta.allure.Allure.step;
 
 public class RegistrationFormwithpageobjects {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-    public static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
-    @Test
-    @Tag("testjob")
-    void Test1() {
-        System.out.println(String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid()));
-    }
     @Test
     @Tag("testjob")
     @DisplayName("Checking the registration form")

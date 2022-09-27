@@ -15,18 +15,21 @@ public class TestBase {
         @BeforeAll
         static void beforeAll() {
 
-            SelenideLogger.addListener("allure", new AllureSelenide());
+            SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
+
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
 
             Configuration.browserCapabilities = capabilities;
-     //       Configuration.baseUrl = "https://demoqa";
+            Configuration.baseUrl = "https://demoqa.com";
+            Configuration.browserSize = "1920x1080";
 
-     //       Configuration.browser = System.getProperty("browser");
-     //       Configuration.browserVersion = System.getProperty("version");
-    //        Configuration.browserSize = System.getProperty("browserSize");
+
+ //           Configuration.browser = System.getProperty("browser");
+  //          Configuration.browserVersion = System.getProperty("version");
+  //          Configuration.browserSize = System.getProperty("browserSize");
 
             Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid());
         }

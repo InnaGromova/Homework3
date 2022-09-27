@@ -29,7 +29,7 @@ public class RegistrationFormPage {
     submitChoose =  $("#submit");
 
     public RegistrationFormPage openPage(){
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#close-fixedban').remove()");
         return this;
