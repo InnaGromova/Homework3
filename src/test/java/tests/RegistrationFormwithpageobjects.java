@@ -4,10 +4,10 @@ import org.junit.jupiter.api.*;
 import pages.RegistrationFormPage;
 import static io.qameta.allure.Allure.step;
 
-public class RegistrationFormwithpageobjects {
+public class RegistrationFormwithpageobjects extends TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     @Test
-    @Tag("testjob")
+    @Tag("testjob1")
     @DisplayName("Checking the registration form")
     void firstTest() {
 
