@@ -27,9 +27,9 @@ public class TestBase {
             Configuration.browserSize = "1920x1080";
 
 
-            Configuration.browser = System.getProperty("browser");
-            Configuration.browserVersion = System.getProperty("version");
-            Configuration.browserSize = System.getProperty("browserSize");
+    //        Configuration.browser = System.getProperty("browser");
+    //        Configuration.browserVersion = System.getProperty("version");
+     //       Configuration.browserSize = System.getProperty("browserSize");
 
             Configuration.remote = String.format("https://%s:%s@%s", config.login(), config.password(), config.urlCloudSelenoid());
         }
